@@ -250,9 +250,9 @@ body {
 
 #carritoCompras{
     background-color: white;
-    
+    color:black;
     width: 420px;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: -397px;
     border-radius: 30px;
 }
@@ -282,6 +282,9 @@ tbody tr td {
 }
 
 
-.contador-compras:hover #carritoCompras{
-    display: block;
+.precio-total-hamburgesas p{
+    
+    font-weight: bold;
+    padding-left: 40px;
+    padding-top: 20px;
 }
