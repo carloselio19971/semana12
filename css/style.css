@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+.map {
+	filter: grayscale(100%) invert(92%) contrast(93%);
+}
+
+.icon-cart {
+	width: 40px;
+	height: 40px;
+	stroke: white;
+}
+
+.icon-close {
+	width: 25px;
+	height: 25px;
+}
+
+.ancho-negro{
+    background-color: black;
+    color:white;
+}
+    
+.ancho-blanco{
+    background-color: white;
+    width: 1200px;
+    margin: 0 auto;
+}
+    
+.ancho-negro, .ancho-blanco{
+    margin: 0 auto;
+
+}
+
+.menu ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    list-style: none;
+    font-size: 25px;
+}
+
+
+.contenedor-menu-hamburgesas{
+    margin: 0 auto;
+    width: 1200px;
+    padding-top:50px;
+    display: grid;
+    grid-template-columns: 35% 75% 15%;
+}
+
+.logo-menu{
+    display: flex;
+    justify-content: center;
+}
+
+.logo-menu img{
+   height: 120px;
+}
+
+.carrito-compras{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contador-compras{
+    background-color:white;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top:28px;
+    color:black;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.foto-hamburgesas img {
+    height: 600px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.banner-hamburesas{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top:100px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:40px;
+}
+.texto-hamburgesas{
+    margin-right: 50px;
+}
+
+
+ .texto-hamburgesas h1{
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.texto-hamburgesas p {
+    font-size: 20px;
+} 
+
+.botones-hamburgesas{
+    display: flex;
+    justify-content: center;
+}
+
+.botones-hamburgesas button{
+    margin-top: 40px;
+    margin-right: 40px;
+    border:1px solid red;
+    border-radius: 30px;
+    background-color: black;
+    color:white;
+    font-size: 20px;
+    height:60px;
+    width: 150px;    
+    font-weight: bold;
+}
+
+.titulo-card{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.contenedor-card{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ gap:30px;
+ margin-bottom: 150px;
+}
+
+.card img{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+.info-card{
+    font-weight: bold;
+}
+
+.info-card h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.info-card p{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.info-card button{
+    margin-top: 30px;
+    height: 60px;
+    width: 400px;
+    color:white;
+    background-color: black;
+    text-align: center;
+}
+
+.datos-local{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-local-horario{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 30px;
+}
+
+.detalle-local{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.titulo-local h3{
+    color:gray;
+    font-size: 20px;
+}
+
+.parrafos-local{
+    margin-top: 50px;
+}
+
+.parrafos-local p {
+    padding-bottom: 20px;
+}
+
+.titulo-local-horario h2{
+    font-size: 50px;
+}
+
+.contenedor-iconos{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.mapa-hamburgesa{
+    padding-top: 200px;
+    padding-bottom:200px;
+   
+}
+
+.contenedor-footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding-bottom: 50px;
+}
+
+.item h3{
+    margin-bottom: 20px;
+}
+
+.item p{
+    color:gray;
+    font-weight: bold;
+}
+
+.logo-footer{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+#carritoCompras{
+    background-color: white;
+    
+    width: 420px;
+    margin-top: 20px;
+    margin-left: -397px;
+    border-radius: 30px;
+}
+
+#carritoComprasLista thead  tr {
+    text-align: center;
+}
+
+table{
+    width: 400px;
+}
+
+tbody {
+    font-weight: normal;
+}
+
+tbody tr td {
+    height: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    text-align: center;
+}
+
+
+#carritoCompras{
+    display: none;
+}
+
+
+.contador-compras:hover #carritoCompras{
+    display: block;
+}

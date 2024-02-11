@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="ancho-negro">
+        <header>      
+            <div class="contenedor-header-hamburgesa">
+                <div class="contenedor-menu-hamburgesas">
+                         <div class="menu">
+                            <ul>
+                                <li>
+                                    <a>Inicio</a>
+                                </li>
+                                <li>
+                                    <a>Servicio</a>
+                                </li>
+                                <li>
+                                    <a>Productos</a>
+                                </li>
+                            </ul>
+                         </div>
+                    <div class="logo-menu">
+                        <img src="images/logo.svg">
+                    </div>
+                    <div class="carrito-compras">
+                       <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="icon-cart"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                    />
+                </svg>
+                <div class="contador-compras">
+
+                <div id="carritoCompras">
+                    <table id="carritoComprasLista">
+                        <thead>
+                            <tr>
+                                <th>Cantidad</th>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                <tr>
+                                    <td>
+                                        <p>Total 105$</p>
+                                    </td>
+                                   
+                                </tr>
+                              
+                                
+                               
+                        </tbody>
+                    </table>
+               </div>
+                </div>
+    
+                
+            </div>
+        </header>
+        <div class="banner-hamburesas">
+            <div class="contenedor-texto-hamburgesas">
+                <div class="texto-hamburgesas">
+                    <h1>HAMBURGUESAS</h1>
+                    <p>   Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos facilis expedita alias? Placeat earum eaque voluptate cumque quia? Sapiente optio repellat amet vero quod exercitationem laborum sed ipsam rem dolorum!</p>
+                </div>
+                <div class="botones-hamburgesas">
+                    <button>Comprar</button>
+                    <button>Menú</button>
+                </div>
+    
+            </div>
+            <div class="foto-hamburgesas">
+                <img src="images/slider1.png">
+            </div>
+        </div>
+
+    </div>
+    <div class="ancho-blanco">
+        <div class="titulo-card">
+            <h2>Hamburguesas</h2>
+        </div>
+       
+        <div id="lista-hamburgesas" class="contenedor-card">
+            <!--1-->
+            <div class="card">
+                <div class="info-card">
+                    <img
+                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVyZ2VyfGVufDB8fDB8fHww"
+                    alt="producto"
+                />
+                    <h3>Parrillera</h3>
+                   <p class="precio">24</p>
+                    <button class="agregarHamburguesa" data-id="1">Agregar Carrito</button>
+                </div>
+            </div>
+            <!--2-->
+            <div class="card">
+                <div class="info-card">
+                    <img
+                    src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fGJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="producto"
+                />
+                    <h3>Carnivora</h3>
+                    <p>30</p>
+                    <button class="agregarHamburguesa" data-id="2">Agregar Carrito</button>
+                </div>
+            </div>
+            <!--3-->
+            <div class="card">
+                <div class="info-card">
+                    <img
+                    src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="producto"
+                />
+                    <h3>Crispy</h3>
+                    <p>21</p>
+                    <button class="agregarHamburguesa" data-id="3">Agregar Carrito</button>
+                </div>
+            </div>
+            <!--4-->
+            <div class="card">
+                <div class="info-card">
+                    <img
+                    src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D"
+                />
+                    <h3>Doble Todo</h3>
+                    <p>26</p>
+                    <button class="agregarHamburguesa" data-id="4">Agregar Carrito</button>
+                </div>
+            </div>
+            <!--5-->
+            <div class="card">
+                <div class="info-card">
+                    <img
+                    src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="producto"
+                />
+                    <h3>Combo 1</h3>
+                    <p>35</p>
+                    <button class="agregarHamburguesa" data-id="5">Agregar Carrito</button>
+                </div>
+            </div>
+            <!--6-->
+            <div class="card">
+                <div class="info-card">
+                    <img
+                    src="https://images.unsplash.com/photo-1549611016-3a70d82b5040?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGJ1cmdlcnxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="producto"
+                />
+        
+                    <h3>Huachana</h3>
+                    <p>25</p>
+                    <button class="agregarHamburguesa" data-id="6">Agregar Carrito</button>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="ancho-negro">
+        <div class="datos-local">
+            <div class="titulo-local-horario">
+                <h2>HORARIO</h2>
+            </div>
+            <div class="detalle-local">
+                <div class="direccion">
+                    <div class="titulo-local">
+                       <h3>Dirección</h3> 
+                    </div>
+                    <div class="parrafos-local">
+                        <p>lorem imput sit</p>
+                        <p>Consecutr adisping elit</p>
+                    </div>
+            
+                </div>
+                <div class="horario">
+                    <div class="titulo-local">
+                        <h3>Horario</h3>
+                    </div>   
+                    <div class="parrafos-local">
+                        <p>LUNES A VIERNES: 9AM- 8PM</p>
+                        <p>SABADO Y DOMINGO: 11AM-7PM</p> 
+                    </div>
+                   
+                </div>
+                <div class="telefono">
+                    <div class="titulo-local">
+                        <h3> Telefono</h3>
+                    </div>
+                    <div class="parrafos-local">
+                        <p>351-9987</p>
+                        <p>975-62100</p>
+                    </div>
+                 
+                </div>
+                <div class="redes">
+                    <div class="titulo-local">
+                       <h3>Redes</h3> 
+                       <div class="contenedor-iconos">
+                        <img src="images/s1.svg">
+                        <img src="images/s2.svg">
+                        <img src="images/s3.svg">
+                        
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+    <div class="ancho-negro">
+        <section class="mapa-hamburgesa">
+			<iframe
+				class="map"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240864.08481701676!2d-99.14361265000001!3d19.3907336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce0026db097507%3A0x54061076265ee841!2zQ2l1ZGFkIGRlIE3DqXhpY28sIENETVgsIE3DqXhpY28!5e0!3m2!1ses-419!2spe!4v1707086843097!5m2!1ses-419!2spe"
+				width="100%"
+				height="500"
+				style="border: 0"
+				allowfullscreen=""
+				loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"
+			></iframe>
+		</section>
+    </div>
+    <div class="ancho-negro">
+        <footer class="contenedor-footer">
+            <div class="logo-footer">
+                <img  src="images/logo.svg">
+            </div>
+            <div class="item">
+                <h3>LOREM</h3>
+                <p>lorem</p>
+                <p>lorem</p>
+                <p>lorem</p>
+                <p>lorem</p>
+            </div>
+            <div class="item">
+                <h3>LOREM</h3>
+                <p>lorem</p>
+                <p>lorem</p>
+                <p>lorem</p>
+                <p>lorem</p>
+            </div>
+            <div class="item">
+                <h3>LOREM</h3>
+                <p>lorem</p>
+                <p>lorem</p>
+                <p>lorem</p>
+                <p>lorem</p>
+            </div>
+            <div class="item redes">
+                <div class="titulo-local">
+                   <h3>Redes</h3> 
+                   <div class="contenedor-iconos">
+                    <img src="images/s1.svg">
+                    <img src="images/s2.svg">
+                    <img src="images/s3.svg">
+                    
+                   </div>
+                </div>
+            </div>
+
+
+        </footer>
+    </div>
+
+   
+
+    <script src="scripts/app.js"></script> 
+</body>
+</html>
