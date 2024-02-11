@@ -2,11 +2,24 @@ let carritoCompras=document.querySelector("#carritoCompras");
 let listaHamburgesas=document.querySelector("#lista-hamburgesas");
 let listadoHamburgesas=[];
 let contenedorCarritoCompras=document.querySelector("#carritoComprasLista tbody");
- cargandoEventos();
+let carritoComprasLista=document.querySelector("#carritoComprasLista");
+console.log(carritoComprasLista);
+cargandoEventos();
+let carritoComprasPadre=document.querySelector(".carrito-compras svg");
+//console.log(carritoComprasPadre);
+let contadorCantidad=document.querySelector("#contador-cantidad");
+//console.log(contadorCantidad);
 
  function cargandoEventos(){
     listaHamburgesas.addEventListener("click",agregrarHamburgesas);
+    carritoComprasLista.addEventListener("click",eliminarHamburgesa);
+    
 
+    document.addEventListener('DOMContentLoaded',()=>{
+        listadoHamburgesas=JSON.parse(localStorage.getItem('hamburgesa')|| []);
+        imprimirHTMListaHamburgesas();
+        mostrarCantidadTotalHamburges();
+    });
  }
 
  function agregrarHamburgesas(e){
@@ -18,6 +31,20 @@ let contenedorCarritoCompras=document.querySelector("#carritoComprasLista tbody"
     }
 }
 
+function eliminarHamburgesa(e){
+    if(e.target.classList.contains('deleteHamburgesa')){
+       // console.log("Diste click");
+        const hamburgesaId=e.target.getAttribute('data-id')
+        listadoHamburgesas=listadoHamburgesas.filter(hamburgesa=>hamburgesa.id!==hamburgesaId);
+        console.log(listadoHamburgesas);
+        imprimirHTMListaHamburgesas();
+        localStorage.setItem('hamburgesa',JSON.stringify(listadoHamburgesas));
+        
+    }
+    
+}
+
+
 function leerHamburguesaSeleccionada(seleccionarHamburguesa){
     const dataSeleccionada={
         nombre:seleccionarHamburguesa.querySelector("h3").textContent,
@@ -27,7 +54,7 @@ function leerHamburguesaSeleccionada(seleccionarHamburguesa){
     }
 
     const existe=listadoHamburgesas.some((hamburgesa)=> hamburgesa.id===dataSeleccionada.id);
-    console.log(existe);
+    //console.log(existe);
 
     if(existe) {
         const listadoFiltradoHamburgesas=listadoHamburgesas.map((hamburgesa)=>{
@@ -45,12 +72,12 @@ function leerHamburguesaSeleccionada(seleccionarHamburguesa){
         listadoHamburgesas=[...listadoHamburgesas,dataSeleccionada];
     }
 
-    console.log(listadoHamburgesas);
+   // console.log(listadoHamburgesas);
     imprimirHTMListaHamburgesas();
 }
 
 let total=0;
-
+let cantidadtotal=0;
 function imprimirHTMListaHamburgesas(){
     limpiarContenedorHamburgesas();
     listadoHamburgesas.forEach((hamburgesa)=>{
@@ -59,14 +86,34 @@ function imprimirHTMListaHamburgesas(){
         row.innerHTML=`<td>${hamburgesa.cantidad}</td>
                        <td>${hamburgesa.nombre}</td>
                        <td>${hamburgesa.precio}</td>
-                       <td><a href="#" class="deleteCourse" data-id="${hamburgesa.id}">X </td>
+                       <td><a href="#" class="deleteHamburgesa"  data-id="${hamburgesa.id}">X </td>
         `;
         contenedorCarritoCompras.appendChild(row);
-        total+=Number.parseInt(hamburgesa.precio)*hamburgesa.cantidad;
-        console.log(total);  
+        localstorageListaHamburguesas();
+        cantidadtotal+=hamburgesa.cantidad;
+        console.log(cantidadtotal);
+
+        function localstorageListaHamburguesas(){
+            localStorage.setItem('hamburgesa',JSON.stringify(listadoHamburgesas));
+        }
+
+
+        //total+=Number.parseInt(hamburgesa.precio)*hamburgesa.cantidad;
+        //console.log(total);  
+
+        //mostrarCantidadTotalHamburges();
      });
 }
 
 function limpiarContenedorHamburgesas(){
     contenedorCarritoCompras.textContent='';
+}
+
+function mostrarCantidadTotalHamburges(){
+    let contadorCantidad=0;
+    listadoHamburgesas.map((hamburgesa)=>{
+        contadorCantidad+=hamburgesa.cantidad;
+    });
+
+    console.log(contadorCantidad);
 }
